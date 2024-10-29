@@ -1,0 +1,46 @@
+Load Tests
+Test Case 1: Workflow Verification with Large Data Load
+Objective: Verify if the workflow functions correctly when handling a large amount of files.
+Preconditions: A dataset containing 1 month’s worth of files (or equivalent large dataset) is available for testing.
+Steps:
+Upload the dataset into the system.
+Start the workflow and monitor the process.
+Expected Results:
+The workflow should initiate and complete without errors.
+All tasks in the workflow should proceed as expected without interruption.
+Test Case 2: File Processing Verification
+Objective: Ensure all files are processed accurately within the workflow.
+Preconditions: The system should have tracking logs or mechanisms to verify the status of processed files.
+Steps:
+Trigger the workflow on a large dataset (e.g., 1 month’s worth of files).
+Monitor each file’s status or check logs to confirm they are being processed.
+Expected Results:
+Every file in the dataset should be processed without errors.
+The final output for each file should match expected results or transformations.
+Test Case 3: Workflow Timeout Check
+Objective: Determine if the workflow experiences timeouts after prolonged execution (1-2 days).
+Preconditions: Configure the environment for continuous execution monitoring, with logging enabled to track any timeout events.
+Steps:
+Start the workflow with a large dataset and allow it to run for 1-2 days.
+Observe for any timeout messages, errors, or interruptions in processing.
+Expected Results:
+The workflow should complete without timeouts or abrupt stops.
+In case of timeout, the system should log the timeout event and provide information on where the issue occurred.
+Test Case 4: Processing Time Measurement
+Objective: Measure and evaluate the time taken to process a specified amount of files.
+Preconditions: Ensure timestamp logging is enabled at the start and end of processing each file.
+Steps:
+Trigger the workflow to process a specific quantity of files (e.g., 1 week’s worth).
+Measure the start and end times to calculate total processing time.
+Expected Results:
+Processing time should fall within an acceptable range for the system’s capacity.
+Identify and document any deviations from expected processing times.
+Test Case 5: Identification of Additional Issues and Concerns
+Objective: Detect any additional issues or bottlenecks encountered during large file processing.
+Preconditions: Logging and monitoring systems should be active to capture unexpected behaviors.
+Steps:
+Run the workflow with a large dataset and monitor for any unusual logs, errors, or slowdowns.
+Document any issues not anticipated in previous test cases.
+Expected Results:
+No unexpected errors, warnings, or performance drops.
+Any issues identified should be documented for further analysis and remediation.
