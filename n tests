@@ -1,0 +1,47 @@
+Negative Tests
+Test Case 1: Missing Important Parameters
+Objective: Verify the system's response when essential parameters are missing.
+Preconditions: Prepare to launch the workflow without providing required parameters.
+Steps:
+Launch the workflow or program without including one or more mandatory parameters (e.g., input file path, output directory, configuration file).
+Observe the system's response.
+Expected Results:
+User Information: The system should display a clear error message indicating which parameters are missing.
+Graceful Exit: The program should terminate without crashing, and resources should be released properly.
+Test Case 2: Invalid or Non-Existent Bucket/Folder
+Objective: Test the system's behavior when provided with non-existent directories, buckets, or storage paths.
+Preconditions: Ensure the specified bucket/folder does not exist in the system.
+Steps:
+Set a non-existent bucket or folder as an input or output path in the workflow.
+Start the workflow.
+Monitor how the system handles the non-existent path.
+Expected Results:
+Error Message: The system should inform the user that the specified bucket/folder does not exist.
+Graceful Exit: The workflow should exit safely without proceeding further and log the error appropriately.
+Test Case 3: Ante Service Not Set Up
+Objective: Ensure the workflow fails gracefully when the Ante service is not configured or running.
+Preconditions: Temporarily disable or uninstall the Ante service in the test environment.
+Steps:
+Attempt to start the workflow that relies on the Ante service.
+Observe the system’s behavior when the service is not available.
+Expected Results:
+User Notification: The system should display a specific error message, such as "Ante service not available."
+Graceful Termination: The workflow should stop execution gracefully without errors and log the issue.
+Test Case 4: Invalid Command-Line Parameters
+Objective: Verify the system’s handling of incorrect command-line parameters.
+Preconditions: Know the correct syntax for command-line parameters.
+Steps:
+Run the workflow with various incorrect command-line parameters (e.g., wrong file paths, unsupported options, or invalid data types).
+Check how the workflow responds to each incorrect input.
+Expected Results:
+Graceful Exit: The workflow should exit gracefully without proceeding further.
+User Feedback: An informative error message should appear, indicating the nature of the incorrect parameter and guiding the user toward correct usage.
+Test Case 5: User Notification and Informative Error Messages
+Objective: Confirm that users are properly informed of errors in each of the above scenarios.
+Preconditions: Ensure that logs or error messages are configured to display on-screen or in a log file.
+Steps:
+Trigger each negative scenario (missing parameters, non-existent folders, missing Ante service, wrong command-line values).
+Observe if the system provides clear and actionable messages in each case.
+Expected Results:
+For each scenario, the error messages should clearly explain what went wrong and suggest corrective actions if applicable.
+Users should be able to understand the issue based solely on the provided information.
