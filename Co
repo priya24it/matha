@@ -1,0 +1,12 @@
+
+  script:
+    # Step 1: Create and activate the virtual environment
+    - python3 -m venv $VENV_DIR
+    - source $VENV_DIR/bin/activate
+
+    # Step 2: Install dependencies
+    - pip install --upgrade pip
+    - pip install -r ./ante/rule_engine/bin/requirements.txt
+
+    # Step 3: Run your Python script
+    - python3 ./ante/rule_engine/bin/setup_and_deploy_all.py $DEPLOY_ENV $CMD_ARGS
